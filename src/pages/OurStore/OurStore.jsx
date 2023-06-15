@@ -218,7 +218,8 @@ const OurStore = () => {
                           setGrid(3);
                         }}
                         src={gr4}
-                        className="d-block img-fluid"
+                        className="d-block img-fluidgit
+                        "
                         alt="grid"
                       />
                       <img
@@ -253,6 +254,7 @@ const OurStore = () => {
 
               <div className="products-list pb-5">
                 <div className="d-flex gap-10 flex-wrap">
+                  <ProductCard grid={grid} />
                   <ProductCard grid={grid} />
                 </div>
               </div>
