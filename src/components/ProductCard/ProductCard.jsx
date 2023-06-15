@@ -11,12 +11,13 @@ import { useLocation } from "react-router-dom";
 
 const ProductCard = (props) => {
   const { grid } = props;
-  console.log(grid);
   let location = useLocation();
 
   return (
     <div
-      className={` ${location.pathname == "/store" ? `gr-${grid}` : "col-3"} `}
+      className={` ${
+        location.pathname === "/product" ? `gr-${grid}` : "col-3"
+      } `}
     >
       <div className="product-card position-relative">
         <div className="wishlist-icon position-absolute z-3">
@@ -44,6 +45,14 @@ const ProductCard = (props) => {
             edit={false}
             activeColor="#ffd700"
           />
+
+          <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique sunt...
+          </p>
+
           <p className="price">$100.00</p>
         </div>
 
